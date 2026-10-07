@@ -1,0 +1,35 @@
+{% load static %}
+<div id="hero-area" class="hero-area-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
+              <div class="contents">
+                <p class="eyebrow">TECNOLOGIA COM PROPÓSITO</p><h1 class="head-title">Ideias que ganham<br>forma na web.</h1>
+                <p>Soluções digitais para apresentar seu negócio, organizar informações e conectar pessoas.</p>
+                <div class="header-button">
+                  <a href="#services" class="btn btn-common">Saiba mais</a>
+                  <a href="#contact" class="btn btn-border">Entre em contato</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+              <div class="intro-img">
+                <img class="img-fluid" src="{% static 'img/intro-mobile.png' %}" alt="Ilustração de uma solução digital">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        {% if messages %}
+          {% for m in messages %}
+            <div class="alert alert-{{ m.tags }}">
+              <button type="button" class="close" data-dismiss="alert"></button>
+              <strong>{{ m }}</strong>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+</header>
+<!-- Header Area wrapper End -->

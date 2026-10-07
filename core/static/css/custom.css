@@ -1,0 +1,29 @@
+/* Personalização do template Fusion. */
+:root { --accent:#0f766e; --ink:#142b40; }
+body { font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:#526477; }
+h1,h2,h3,h4 { color:var(--ink); font-family:inherit; }
+a { color:var(--accent); } a:hover { color:#115e59; }
+.navbar-brand { color:var(--ink)!important; font-size:26px; font-weight:750; display:flex; align-items:center; gap:10px; }
+.brand-mark { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:10px; background:var(--accent); color:white; font-size:22px; }
+#hero-area { background:linear-gradient(130deg,#f0fdfa,#eef4fc); border-radius:0 0 48px 48px; }
+#hero-area .contents { padding:155px 0 95px; }
+#hero-area .contents .head-title { font-size:clamp(34px,4.5vw,56px); line-height:1.12; font-weight:750; letter-spacing:-1.6px; }
+.eyebrow { color:var(--accent)!important; font-size:12px!important; font-weight:750; letter-spacing:2px; margin-bottom:18px; }
+.btn { border-radius:10px; text-transform:none; font-weight:650; }
+.btn-common,.back-to-top { background:var(--accent); } .btn-common:hover { background:#115e59; }
+.btn-border { color:var(--accent); border-color:var(--accent); } .btn-border:hover { background:var(--accent); }
+.navbar-expand-md .navbar-nav .nav-link:hover,.navbar-expand-md .navbar-nav .active>.nav-link { color:var(--accent)!important; }
+.section-header .section-title { font-size:32px; letter-spacing:-.6px; }
+.shape { border-color:var(--accent)!important; }
+.bg-gray { background:#f5f8fb; }
+.services-item,.team-item,.table { border:1px solid #e3eaf0; border-radius:16px; box-shadow:0 6px 24px #142b4008; }
+.services-item { height:calc(100% - 30px); text-align:left; padding:28px; }
+.services-item .icon i { color:var(--accent); }
+#active-tb { border:2px solid var(--accent); }
+.form-control { border-radius:9px; border-color:#d9e3ea; } .form-control:focus { border-color:var(--accent); box-shadow:0 0 0 3px #0f766e20; }
+.contact-note { padding:32px; background:white; border-radius:16px; border:1px solid #e3eaf0; }
+.empty-state { padding:24px; border:1px dashed #b6c9d4; border-radius:12px; text-align:center; }
+#footer { background:#142b40; color:#dae5ec; } #footer h3,#footer a { color:#e6fffa; }
+#copyright { margin-top:30px; border-top:1px solid #ffffff25; padding-top:22px; }
+@media(max-width:767px) { #hero-area .contents { padding:110px 0 30px; } #hero-area .intro-img { padding-bottom:35px; } .contact-note { margin-top:24px; } .section-padding { padding:55px 0; } }
+@media(prefers-reduced-motion:reduce) { * { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }

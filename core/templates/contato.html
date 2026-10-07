@@ -1,0 +1,53 @@
+{% load static %}
+<section id="contact" class="section-padding bg-gray">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Contate-nos</h2>
+          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-7 col-md-12 col-sm-12">
+            <div class="contact-block">
+              {% if form.errors %}<div class="alert alert-danger" role="alert">Revise os campos abaixo.{{ form.errors }}</div>{% endif %}
+              <form id="contato" method="post" action="{% url 'index' %}">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" aria-label="Nome" id="nome" value="{{ form.nome.value|default_if_none:'' }}" name="nome" placeholder="Nome" required data-error="Informe seu nome">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input type="email" placeholder="E-mail" aria-label="Email" id="email" class="form-control" name="email" value="{{ form.email.value|default_if_none:'' }}" required data-error="Informe seu e-mail">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                   <div class="col-md-12">
+                    <div class="form-group">
+                      <input type="text" placeholder="Assunto" aria-label="Assunto" id="assunto" name="assunto" value="{{ form.assunto.value|default_if_none:'' }}" class="form-control" required data-error="Informe o assunto">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea class="form-control" aria-label="Mensagem" id="mensagem" placeholder="Mensagem" name="mensagem" rows="7" data-error="Escreva sua mensagem" required>{{ form.mensagem.value|default_if_none:'' }}</textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="submit-button text-left">
+                      <button class="btn btn-common" id="form-submit" type="submit">Enviar e-mail</button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-xs-12">
+            <aside class="contact-note"><p class="eyebrow">FALE SOBRE SUA IDEIA</p><h3>O próximo passo começa aqui.</h3><p>Informe seu nome, e-mail e o que você precisa. Os campos são obrigatórios.</p><p>Ambiente demonstrativo: o envio real depende da configuração de e-mail do servidor.</p></aside>
+          </div>
+        </div>
+      </div>
+    </section>

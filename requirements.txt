@@ -1,0 +1,7 @@
+Django>=5.2,<5.3
+dj-database-url>=2,<4
+django-stdimage>=6,<7
+Pillow>=10
+whitenoise>=6,<7
+gunicorn>=23,<24
+psycopg2-binary>=2.9,<3
